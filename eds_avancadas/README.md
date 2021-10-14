@@ -7,7 +7,7 @@
    1.2. [Versão otimizada](algoritmos/dsu_otimizado.cpp)
    
 
-2. [Árvores de Fenwick](algoritmos/fenwick_tree.cpp) (*Binary Indexed Tree*)
+2. [Árvore de Fenwick](algoritmos/fenwick_tree.cpp) (*Binary Indexed Tree*)
 
 
 3. [Árvore de Segmentos](algoritmos/segtree.cpp)
