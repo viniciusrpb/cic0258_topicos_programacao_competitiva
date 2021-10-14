@@ -4,9 +4,9 @@ Códigos-fontes produzidos e resoluções de problemas para a disciplina "CIC0xx
 
 ## Tópicos
 
-1. Estruturas de Dados
+1. Estruturas de Dados Avançadas
 
-2. Processamento de Strings
+2. [Processamento de Strings](strings/README.md)
 
 3. Paradigmas de Resolução de Problemas
 
