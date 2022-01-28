@@ -92,7 +92,7 @@ int main(){
     
     none = 0;
     
-    for(int l = 1; l <=m; l++)
+    for(l = 1; l <=m; l++)
     {
         if(lang[l].size())
         {
