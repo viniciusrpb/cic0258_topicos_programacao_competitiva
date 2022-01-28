@@ -1,6 +1,10 @@
 # CIC0258 - Tópicos Especiais em Programação Competitiva
 
-Códigos-fontes produzidos e resoluções de problemas para a disciplina "CIC0xxx - Tópicos Especiais em Programação Competitiva"
+Códigos-fontes produzidos e resoluções de problemas para a disciplina "CIC0258 - Tópicos Especiais em Programação Competitiva"
+
+## Autores
+
+
 
 ## Tópicos
 
