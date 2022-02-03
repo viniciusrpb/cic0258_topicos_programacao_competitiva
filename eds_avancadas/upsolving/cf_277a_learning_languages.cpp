@@ -28,24 +28,17 @@ public:
 
     int find_set(int x)
     {
-        while(x != parent[x])
-            x = parent[x];
-        return x;
+        if(x == parent[x])
+            return x;
+        
+        return parent[x] = find_set(parent[x]);
     }
-
+    
     bool same_set(int a, int b)
     {
         return find_set(a) == find_set(b);
     }
-
-    int find_set2(int x)
-    {
-        if(x == parent[x])
-            return x;
-        
-        return parent[x] = find_set2(parent[x]);
-    }
-
+    
     int connectedComponents(int n)
     {
         set<int> s;
