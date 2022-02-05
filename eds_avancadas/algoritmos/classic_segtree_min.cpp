@@ -7,7 +7,7 @@
  * Objetivo: Implementar uma Segment Tree de Mínimos
  *           https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/B
  * 
- * Compilar no terminal: g++ classic_segtree_minimum.cpp -std=c++11 -o segtree_min
+ * Compilar no terminal: g++ classic_segtree_min.cpp -std=c++11 -o segtree_min
  * Executar: ./segtree_min
  */
 
