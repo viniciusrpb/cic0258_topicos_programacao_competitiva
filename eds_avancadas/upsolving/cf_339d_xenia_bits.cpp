@@ -7,7 +7,7 @@
  * Objetivo: Solução do problema no Codeforces #197 (Div. 2) - D. Xenia and Bit Operations
  *           https://codeforces.com/problemset/problem/339/D
  * 
- * Compilar no terminal: g++ cf_339d_xenia_bits.cpp -std=c++11 -o xenia.cpp
+ * Compilar no terminal: g++ cf_339d_xenia_bits.cpp -std=c++11 -o xenia
  * Executar: ./xenia
  */
 
