@@ -20,4 +20,4 @@
    
    3.2. [SegTree Clássica de Mínimo](algoritmos/segtree_min.cpp)
 
-   3.3. Upsolving: [339D - Xenia and Bit Operations](https://codeforces.com/problemset/problem/339/D) [[Solução]upsolving/cf_339d_xenia_bits.cpp)]
+   3.3. Upsolving: [339D - Xenia and Bit Operations](https://codeforces.com/problemset/problem/339/D) [[Solução](upsolving/cf_339d_xenia_bits.cpp)]
