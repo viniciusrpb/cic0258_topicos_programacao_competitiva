@@ -4,17 +4,17 @@ Códigos-fontes produzidos e resoluções de problemas para a disciplina "CIC025
 
 ## Autores
 
-
+Vinícius R. P. Borges
 
 ## Tópicos
 
 1. [Estruturas de Dados Avançadas](eds_avancadas/README.md)
 
-2. [Processamento de Strings](strings/README.md)
+2. [Programação Dinâmica](programacao_dinamica/README.md)
 
-3. Paradigmas de Resolução de Problemas
+3. [Processamento de Strings](strings/README.md)
 
-4. Grafos
+4. [Grafos](grafos/README.md)
 
 5. Teoria dos Números
 
