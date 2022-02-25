@@ -3,7 +3,7 @@
 
 1. Problemas Clássicos: abordagem recursiva
 
-    1.1. [DP Pega Não-Pega](algoritmos/problema_moedas.cpp)
+    1.1. [DP Pega/Não-Pega](algoritmos/problema_moedas.cpp)
 
     1.2. [DP do Troco Mínimo](algoritmos/troco_minimo.cpp)
 
