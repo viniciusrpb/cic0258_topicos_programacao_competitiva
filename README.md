@@ -16,6 +16,6 @@ Vinícius R. P. Borges
 
 4. [Grafos](grafos/README.md)
 
-5. Teoria dos Números
+5. [Matemática](matematica/README.md)
 
 6. [Geometria Computacional](geometria_computacional/README.md)
