@@ -43,7 +43,7 @@ void build(string s)
 
 int main()
 {
-    
+    int n;
     for(int i = 0; i < MAX_NODOS; i++)
     {
         for(int j = 0; j < MAX_ALFABETO; j++)
@@ -52,7 +52,9 @@ int main()
         }
     }
     
-    for(int i = 0; i < 3; i++)
+    cin >> n;
+
+    for(int i = 0; i < n; i++)
     {
         string s;
         cin >> s;
