@@ -1,5 +1,5 @@
 
-# Strings
+# Processamento de Strings
 
 
 1. Princípios de Strings
