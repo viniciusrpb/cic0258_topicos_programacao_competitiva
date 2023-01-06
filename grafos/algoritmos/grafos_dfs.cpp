@@ -32,29 +32,24 @@ vector<vector<int>> g(MAX);
 vector<bool> visited(MAX,false);
 
 /* busca em profundidade: depth first search*/
-void dfs(int start)
-{
+void dfs(int start){
     printf("%d ",start+1);
     visited[start] = true;
 
-    for(int u : g[start])
-    {
-        if(visited[u] == false)
-        {
+    for(int u : g[start]){
+        if(visited[u] == false){
             dfs(u);
         }
     }
 }
 
+int main(){
 
-int main()
-{
     int n,e,u,v;
 
     scanf("%d %d",&n,&e);
 
-    for(int i = 0; i < e; i++)
-    {
+    for(int i = 0; i < e; i++){
         scanf("%d %d",&u,&v);
         u--;
         v--;
@@ -62,11 +57,9 @@ int main()
         g[v].push_back(u);
     }
 
-    for(int i = 0; i < n; i++)
-    {
+    for(int i = 0; i < n; i++){
         printf("%d: ",i+1);
-        for(int j = 0; j < g[i].size(); j++)
-        {
+        for(int j = 0; j < g[i].size(); j++){
             printf("=> %d ",g[i][j]+1);
         }
         printf("\n");

@@ -71,7 +71,7 @@ int main(){
 
     for(int i = 0; i < n; i++){
         printf("%d: ",i+1);
-        for(int j = 0; j < g[i].size(); j++)        {
+        for(int j = 0; j < g[i].size(); j++){
             printf("=> %d ",g[i][j]+1);
         }
         printf("\n");
