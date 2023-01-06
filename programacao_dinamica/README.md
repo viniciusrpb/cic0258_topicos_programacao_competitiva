@@ -13,7 +13,7 @@
 
     1.4. [Problema da Mochila Binária](algoritmos/mochila_binaria_recursiva.cpp)
 
-    1.2. Upsolving: [xxx](https://codeforces.com/problemset/) [[Solução](upsolving/xxx)] 
+    <!-- 1.2. Upsolving: [xxx](https://codeforces.com/problemset/) [[Solução](upsolving/xxx)] -->
 
    
 2. Problemas Clássicos: abordagem iterativa
