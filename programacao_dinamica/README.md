@@ -7,7 +7,7 @@
 
     1.2. [DP do Troco Mínimo](algoritmos/problema_troco_minimo.cpp)
 
-    1.3. [Algoritmo de Kadane](algoritmos/kadane.cpp)
+    <!-- 1.3. [Algoritmo de Kadane](algoritmos/kadane.cpp) -->
 
     1.3. [DP de Dígitos](algoritmos/dp_digitos.cpp)
 
@@ -20,7 +20,7 @@
  
     2.1. [Problema da Mochila Binária](algoritmos/mochila_binaria_iterativa.cpp)
     
-    2.2. Subsequência de Soma Máxima (*Maximum Subarray Sum*) [Algoritmo de Kadane (DP)](algoritmos/kadane_dp.cpp), [Two Pointers](algoritmos/subseqsomamax.cpp)
+    2.2. Subsequência de Soma Máxima (*Maximum Subarray Sum*): [Algoritmo de Kadane (DP)](algoritmos/kadane_dp.cpp), [Two Pointers](algoritmos/subseqsomamax.cpp)
 
 
 3. Problemas Específicos de Programação Dinâmica
