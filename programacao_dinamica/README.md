@@ -10,7 +10,7 @@
 
 1.3. [DP de Dígitos](algoritmos/dp_digitos.cpp)
 
-1.4. [Problema da Mochila Binária](algoritmos/mochila_binaria_recursiva.cpp)
+1.4. [Problema da Mochila Binária](algoritmos/mochila_rec.cpp)
  
 ## 2. Problemas Clássicos: abordagem iterativa
  
