@@ -6,7 +6,7 @@
 
 1.2. [DP do Troco Mínimo](algoritmos/problema_troco_minimo.cpp)
 
-    <!-- 1.3. [Algoritmo de Kadane](algoritmos/kadane.cpp) -->
+<!-- 1.3. [Algoritmo de Kadane](algoritmos/kadane.cpp) -->
 
 1.3. [DP de Dígitos](algoritmos/dp_digitos.cpp)
 
