@@ -56,22 +56,30 @@ ll sssm_n2(int *v, int N){
 
 /* Abordagem por Two Pointers, complexidade O(N) */
 ll sssm_n(int *v, int N){
-    int l,r;
-    ll ans = 0, soma = 0,s=0;
+    int l,r,j;
+    ll somamax,somatemp;
 
-    for (int k = 0; k < N; k++){
-        soma = max((ll) v[k],soma+v[k]);
-        ans = max(ans,soma);
-        if(soma >= ans){
-            l = s;
-            r = k;
+    j = 0;
+    somamax = -1e9;
+    somatemp = 0;
+
+    for(int i = 0; i < N; i++){
+        somatemp = somatemp + v[i];
+
+        if(somatemp > somamax){
+            somamax = somatemp;
+            l = j;
+            r = i;
         }
-        if(ans < soma)
-            s = k+1;
+
+        if(somatemp < 0){
+            somatemp = 0;
+            j = i+1;
+        }
     }
 
     //printf("%d %d\n",l,r);
-    return ans;
+    return somamax;
 }
 
 int main(){
