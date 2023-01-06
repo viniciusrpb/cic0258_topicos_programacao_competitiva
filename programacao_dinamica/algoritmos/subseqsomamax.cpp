@@ -1,89 +1,93 @@
+/* Universidade de Brasília
+ * Departamento de Ciência da Computação
+ * CIC0258 - Tópicos Especiais em Programação Competitiva
+ * Prof. Dr. Vinicius R. P. Borges
+ *
+ * Tópico: Programação Dinâmica
+ * Objetivo: Código-fonte que implementa três soluções para
+ *           resolver o problema do sub-sequência de soma máxima:
+ *           sssm_n3 : solução Naive O(N^3)
+ *           sssm_n2 : solução Naive O(N^2)
+ *           sssm_n  : solução por Two Pointers O(N)
+ *
+ * Compilar no terminal: g++ subseqsomamax.cpp -std=c++17 -o sssm
+ * Executar: ./sssm
+ */
+
 #include<bits/stdc++.h>
+#define MAX 1000
 
 using namespace std;
 
-int scsm_n3(vector<int>& vetor)
-{
-    int N = vetor.size();
-    int ans = -1e9;
+typedef long long ll;
 
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = i; j < N; j++)
-        {
-            int sum = 0;
+/* Abordagem de complexidade O(N*N*N) */
+ll sssm_n3(int *v, int N){
+    ll ans = -1e9;
+
+    for (int i = 0; i < N; i++){
+        for (int j = i; j < N; j++){
+            ll soma = 0;
 
             for (int k = i; k <= j; k++)
-                sum += vetor[k];
+                soma += v[k];
 
-            ans = max(ans, sum);
+            ans = max(ans, (ll) soma);
         }
     }
 
     return ans;
 }
 
-int scsm_n2(vector<int>& vetor)
-{
-    int N = vetor.size();
-    int ans = 0;
-    
+/* Abordagem de complexidade O(N*N) */
+ll sssm_n2(int *v, int N){
+    ll ans = 0;
+
     for (int i = 0; i < N; i++){
-        int sum = 0;
+        ll soma = 0;
         for(int j = i; j < N; j++){
-            sum += vetor[j];
-            ans = max(ans,sum);
+            soma += v[j];
+            ans = max(ans, soma);
         }
     }
-    
+
     return ans;
 }
 
-int scsm_n(vector<int>& vetor)
-{
-    int l,r,ans = 0, sum = 0,s=0;
-    int N = vetor.size();
-    
+/* Abordagem por Two Pointers, complexidade O(N) */
+ll sssm_n(int *v, int N){
+    int l,r;
+    ll ans = 0, soma = 0,s=0;
+
     for (int k = 0; k < N; k++){
-        sum = max(vetor[k],sum+vetor[k]);
-        ans = max(ans,sum);
-        if(sum >= ans)
-        {
+        soma = max((ll) v[k],soma+v[k]);
+        ans = max(ans,soma);
+        if(soma >= ans){
             l = s;
             r = k;
         }
-        if(ans < sum)
+        if(ans < soma)
             s = k+1;
     }
-    
-    printf("%d %d\n",l,r);
+
+    //printf("%d %d\n",l,r);
     return ans;
 }
 
+int main(){
 
-int main()
-{
+    int arr[MAX];
+    int n;
 
-    vector<int> a;
-    
-    a.push_back(3);
-    a.push_back(-5);
-    a.push_back(0);
-    a.push_back(2);
-    a.push_back(4);
-    a.push_back(-1);
-    a.push_back(-3);
-    
-    int s = 0;
-    for(int i = 0; i < a.size(); i++)
-    {
-        s = s+a[i];
-        printf("%d ",s);
+    scanf("%d",&n);
+
+    for(int i = 0; i < n; i++){
+        scanf("%d",&arr[i]);
     }
-    printf("\n");
-    
-    printf("%d\n",scsm_n3(a));
-    printf("%d\n",scsm_n2(a));
-    printf("%d\n",scsm_n(a));
+
+    printf("%lld\n",sssm_n3(arr,n));
+    printf("%lld\n",sssm_n2(arr,n));
+    printf("%lld\n",sssm_n(arr,n));
+
     return 0;
 }
