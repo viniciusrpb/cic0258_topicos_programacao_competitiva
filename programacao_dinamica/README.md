@@ -14,7 +14,7 @@
  
 ## 2. Problemas Clássicos: abordagem iterativa
  
-2.1. [Problema da Mochila Binária](algoritmos/mochila_binaria_iterativa.cpp)
+2.1. [Problema da Mochila Binária](algoritmos/mochila_dp.cpp)
     
 2.2. Subsequência de Soma Máxima (*Maximum Subarray Sum*): [Algoritmo de Kadane (DP)](algoritmos/kadane_dp.cpp), [Two Pointers](algoritmos/subseqsomamax.cpp)
 
