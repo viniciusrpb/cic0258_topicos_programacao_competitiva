@@ -4,9 +4,9 @@
 
 ## 2. Busca em Grafos
 
-2.1. [Busca em Largura](algoritmos/bfs.cpp)
+2.1. [Busca em Largura](algoritmos/grafos_bfs.cpp)
 
-2.2. [Busca em Profundidade](algoritmos/dfs.cpp)
+2.2. [Busca em Profundidade](algoritmos/grafos_dfs.cpp)
 
 ## 3. Caminhos Mínimos
 
