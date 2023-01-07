@@ -20,7 +20,7 @@
 
 2.3. [Subsequência Crescente Máxima (*Longest Increasing Subsequence*)](algoritmos/lsi.cpp)
 
-2.4. [Caixeiro Viajante (*Travelling Salesman*)](algoritmos/travelling_salesman_dp.cpp) *using bitmask*
+2.4. [Caixeiro Viajante (*Travelling Salesman*)](algoritmos/travelling_salesman.cpp) *usando bitmask*
 
 ## Upsolving
 
