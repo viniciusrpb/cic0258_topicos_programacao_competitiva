@@ -18,7 +18,7 @@
     
 2.2. Subsequência de Soma Máxima (*Maximum Subarray Sum*): [Algoritmo de Kadane (DP)](algoritmos/kadane_dp.cpp), [Two Pointers](algoritmos/subseqsomamax.cpp)
 
-2.3. [Subsequência Crescente Máxima (*Longest Increasing Subsequence*)](algoritmos/lis.cpp)
+2.3. Subsequência Crescente Máxima (*Longest Increasing Subsequence*): [DP](algoritmos/lis_dp.cpp), [Busca Binária](../busca_binaria/algoritmos/lis_bsearch.cpp)
 
 2.4. [Caixeiro Viajante (*Travelling Salesman*)](algoritmos/travelling_salesman.cpp) *usando bitmask*
 
