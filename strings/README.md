@@ -10,7 +10,7 @@
 
 4. Análise de Sufixos
 
-   4.1. [Z-Buffer](algoritmos/zbuffer.cpp)
+   4.1. [Z Function](algoritmos/z_function.cpp)
    
    4.2. [Suffix Array](algoritmos/suffix_array.cpp)
  
