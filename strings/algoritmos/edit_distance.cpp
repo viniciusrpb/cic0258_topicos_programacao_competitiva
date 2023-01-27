@@ -4,11 +4,13 @@
  * Prof. Dr. Vinicius R. P. Borges
  *
  * Tópico: Strings
- * Objetivo: Implementação do Algoritmo Z para encontrar a maior substring que eh um prefixo
- *           da string de entrada
+ * Objetivo: Implementação da Edit Distance para determinar a menor quantidade
+ * de operacoes para transformar uma string a em uma string b
  *
- * Compilar no terminal: g++ z_algorithm.cpp -std=c++17 -o zfunc
- * Executar: ./zfunc
+ * Compilar no terminal: g++ edit_distance.cpp -std=c++17 -o dist
+ * Executar: ./dist
+ * 
+ * Complexidade: O(nm) para duas strings de comprimento n e M
  */
 
 #include<bits/stdc++.h>
