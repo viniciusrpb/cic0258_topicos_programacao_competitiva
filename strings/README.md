@@ -18,11 +18,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.2. [Algoritmo Z](algoritmos/z_algorithm.cpp)
      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.3. Upsolving: [K. Dishonest Driver](https://codeforces.com/gym/102465/problem/K) [[Solução](upsolving/k_dishonest_driver.cpp)]
-     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.4. Upsolving: [126B - Password](https://codeforces.com/contest/126/problem/B) [[Solução](upsolving/126b_password.cpp)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.3. Upsolving: [126B - Password](https://codeforces.com/contest/126/problem/B) [[Solução](upsolving/126b_password.cpp)]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.5. Upsolving: [432D - Prefixes and Suffixes](http://codeforces.com/contest/432/problem/D) [[Solução](upsolving/432d_prefixes_suffixes.cpp)] 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.4. Upsolving: [432D - Prefixes and Suffixes](http://codeforces.com/contest/432/problem/D) [[Solução](upsolving/432d_prefixes_suffixes.cpp)]
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.5. Upsolving: [K. Dishonest Driver](https://codeforces.com/gym/102465/problem/K) [[Solução](upsolving/k_dishonest_driver.cpp)]
 
 
 3.3. [Suffix Array](algoritmos/suffix_array.cpp)
