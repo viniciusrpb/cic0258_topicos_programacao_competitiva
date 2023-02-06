@@ -8,7 +8,7 @@
  *           resolver o problema do sub-sequência de soma máxima:
  *           sssm_n3 : solução Naive O(N^3)
  *           sssm_n2 : solução Naive O(N^2)
- *           sssm_n  : solução por Two Pointers O(N)
+ *           sssm_n  : solução Gulosa O(N)
  *
  * Compilar no terminal: g++ subseqsomamax.cpp -std=c++17 -o sssm
  * Executar: ./sssm
@@ -54,7 +54,7 @@ ll sssm_n2(int *v, int N){
     return ans;
 }
 
-/* Abordagem por Two Pointers, complexidade O(N) */
+/* Abordagem Gulosa, complexidade O(N) */
 ll sssm_n(int *v, int N){
     int l,r,j;
     ll somamax,somatemp;
