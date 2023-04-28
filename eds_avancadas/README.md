@@ -13,7 +13,9 @@
 
 2. SQRT Decomposition
 
-   2.1. [Mo's Algorithm](algoritmos/sqrt_decomposition.cpp)
+   2.1. [Versão Tradicional](algoritmos/sqrt_decomposition.cpp)
+
+   2.2. [Mo's Algorithm](algoritmos/mo_algorithm.cpp)
 
 
 3. Range Query Data Structures
