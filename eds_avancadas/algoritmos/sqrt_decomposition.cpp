@@ -8,6 +8,15 @@
  *
  * Compilar no terminal: g++ sqrt_decomposition.cpp -std=c++17 -o sqrt
  * Executar: ./sqrt
+ *
+ * Exemplo de Entrada
+ *
+ *  6 4
+    0 0 0 0 0 0
+    0 1 4
+    1 0 2
+    0 3 2
+    1 0 5
  */
 
 #include<bits/stdc++.h>
