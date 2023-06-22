@@ -3,6 +3,8 @@
 
 1. Fundamentos de Geometria Computacional
 
+   1.1. [Estruturas Geométricas](algoritmos/geometrica.cpp)
+   
 2. Paradigma Sweep Line
 
    2.1. [Valor Máximo de Intervalos Disjuntos](algoritmos/andrews_monotone_chain.cpp) (*Maximal Disjoint Intervals*)
