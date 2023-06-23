@@ -20,35 +20,31 @@ using namespace std;
 
 int dp[MAX][MAX];
 
-int edit_distance_iter(string s1, string s2){
-    
-    dp[0][0] = 0;
-    dp[0][1] = 0;
-    dp[1][0] = 0;
-    int c;
-    
+int edit_distance_iter(string& s1, string& s2){
+       
     int N = s1.size();
     int M = s2.size();
     
-    for (int i = 1; i <= N; i++){
-        dp[i][0] = i;
-        
-        for (int j = 1; j <= M; j++){
-            dp[0][j] = j;
+    for (int i = 0; i <= N; i++){        
+        for (int j = 0; j <= M; j++){
             
-            c=1;
-            if (s1[i - 1] == s2[i - 1])
-                c = 0;
-            
-            dp[i][j] = min(min(dp[i][j - 1] + 1, dp[i - 1][j] + 1), dp[i - 1][j - 1]+c);
+            if(i == 0)
+            dp[i][j] = j;
+        else
+            if(j == 0)
+                dp[i][j] = i;
+            else
+                if(s1[i - 1] == s2[j - 1])
+                    dp[i][j] = dp[i-1][j-1];
+                else
+                    dp[i][j] = min(min(dp[i][j - 1] + 1, dp[i - 1][j] + 1), dp[i - 1][j - 1]+1);
             
         }
     }
-
     return dp[N][M];
 }
 
-int edit_distance_rec(string s1, string s2, int a, int b){   
+int edit_distance_rec(string& s1, string& s2, int a, int b){   
     if (a == 0 || b == 0){
         dp[a][b] = max(a, b);
         return max(a, b);
