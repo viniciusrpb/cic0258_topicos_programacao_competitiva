@@ -16,18 +16,23 @@
  */
 
 #include<bits/stdc++.h>
-#define MAX 100000
+#define MAX 200000
 
 using namespace std;
 
-int bsearch_index(int *v, int l, int r, int key)
-{
-    while (r - l > 1) {
-        int m = l + (r - l) / 2;
-        if (v[m] >= key)
-            r = m;
-        else
-            l = m;
+int bsearch_index(int *v, int l, int r, int key){
+
+    int ans;
+    
+    while (l<=r) {
+        int mid = (l + r) / 2;
+        if (v[mid] >= key){
+            ans = mid;
+            r = mid-1;
+        }
+        else{
+            l = mid+1;
+        }
     }
 
     return r;
