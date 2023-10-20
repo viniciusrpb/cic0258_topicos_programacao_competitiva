@@ -40,24 +40,17 @@ int bsearch_index(int *v, int l, int r, int key){
 
 int lis_nlogn(int *v, int n){
 
-    int tail[n+1];
-
-    int index,tam = 1;
-
-    tail[0] = v[0];
+    int bucket[n+1];
+    bucket[0] = v[0];
+    int ans = 1;
     for(int i = 1; i < n; i++){
-
-        if (v[i] < tail[0])
-            tail[0] = v[i];
-        else
-            if (v[i] > tail[tam - 1])
-                tail[tam++] = v[i];
-            else{
-                index = bsearch_index(tail,-1,tam-1,v[i]);
-                tail[index] = v[i];
-            }
+        if(v[i] > bucket[ans-1])
+            bucket[ans++] = v[i];
+        else{
+            int index = lower_bound(bucket,bucket+ans,v[i])-bucket;
+            bucket[index]=v[i];
+        }
     }
-
     return tam;
 }
 
