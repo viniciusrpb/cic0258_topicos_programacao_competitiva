@@ -28,94 +28,72 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int,int> pii;
-typedef pair<ll,int> plli;
-typedef pair<int,ll> pill;
+typedef pair<ll,int> pli; // tipo p/ fila de prioridade min
+typedef pair<int,ll> pil; // tipo p/ o grafo
 
-const int N = 100002;
-const ll oo = 1e18;
+const ll oo = 4e18; // + infinito
 
-ll d[N];
-int predecessor[N];
-int n;
-
-vector<vector<pill>> g(N);
+int n,m; // numero de vertices, numero de arestas
+vector<ll> d(100001,oo);
+vector<int> predecessor(100001,-1);
+vector<vector<pil>> g(100001);
 
 void dijkstra(int s){
-
-    ll dist_su,w;
     int u,v;
+    ll mindist_su,w;
 
-    for(int i = 1; i <=n;i++)
-        d[i] = oo;
+    priority_queue<pli,vector<pli>,greater<pli>> pq;
 
-    priority_queue<plli,vector<plli>,greater<plli>> pq;
+    for(u = 1; u <= n; u++)
+        d[u] = oo;
 
     d[s] = 0;
     predecessor[s] = s;
+    pq.push({d[s],s});
 
-    pq.push(make_pair(d[s],s));
-
-    while(!pq.empty())    {
-        tie(dist_su,u) = pq.top();
+    while(!pq.empty()){
+        //pega o primeiro nodo da fila
+        tie(mindist_su,u) = pq.top();
         pq.pop();
 
-        //skip
-        if(dist_su > d[u])
-            continue;
+        if(mindist_su > d[u])
+            continue; /// ignora
 
-        for(auto aresta : g[u]){
-            tie(v,w) = aresta;
-
-            if(d[v] > d[u] + w)
-            {
-                d[v] = d[u]+w;
+        for(auto edge : g[u]){
+            tie(v,w) = edge; // peso w para chegar de u ateh v
+            if(d[v] > d[u] + w){
+                d[v] = d[u]+w;  // relaxamento
                 predecessor[v] = u;
-                pq.push(make_pair(d[v],v));
+                pq.push({d[v],v});
             }
         }
     }
 }
 
-int main()
-{
-    int m,a,b,w;
+int main(){
 
+    int u,v,w;
     scanf("%d %d",&n,&m);
 
-    for(int e = 0; e < m; e++)
-    {
-        scanf("%d %d %d",&a,&b,&w);
-        g[a].push_back(make_pair(b,w));
-        g[b].push_back(make_pair(a,w));
+    for(int i = 0; i < m; i++){
+        scanf("%d %d %d",&u,&v,&w);
+        g[u].push_back({v,w});
+        //g[v].push_back({u,w}); // grafo nao direcionado
     }
 
     int start = 1;
 
     dijkstra(start);
 
-    if(d[n] < oo){
-
-        list<int> l;
-        l.push_front(n);
-        b = predecessor[n];
-
-        while(b != start){
-            l.push_front(b);
-            b = predecessor[b];
-        }
-
-        l.push_front(b);
-
-        while(l.size()){
-            b = l.front();
-            l.pop_front();
-            printf("%d ",b);
-        }
-        printf("\n");
+    for(int i = 1; i <= n; i++){
+        printf("%lld ",d[i]);
     }
-    else
-        printf("-1\n");
+    printf("\n");
+
+    for(int i = 1; i <= n; i++){
+        printf("%d ",predecessor[i]);
+    }
+    printf("\n");
 
     return 0;
 }
