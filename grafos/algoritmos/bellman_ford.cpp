@@ -35,8 +35,6 @@ const ll oo = 4e18; // + infinito
 
 int n,m; // numero de vertices, numero de arestas
 vector<ll> d(100001,oo);
-vector<ll> visited(100001,false);
-vector<int> predecessor(100001,-1);
 vector<vector<pil>> g(100001);
 
 bool bellman_ford(int start){
