@@ -35,6 +35,8 @@ const ll oo = 4e18; // + infinito
 
 int n,m; // numero de vertices, numero de arestas
 vector<ll> d(100001,oo);
+vector<ll> visited(100001,false);
+vector<int> predecessor(100001,-1);
 vector<vector<pil>> g(100001);
 
 bool bellman_ford(int start){
@@ -48,8 +50,10 @@ bool bellman_ford(int start){
             // u ---> w ---> v
             for(pil elem : g[u]){
                 tie(v,w) = elem;
-                if (d[u] != oo and d[u] + w < d[v])
+                if (d[u] != oo and d[u] + w < d[v]){
+                    predecessor[v] = u;
                     d[v] = d[u] + w;
+                }
             }
         }
     }
