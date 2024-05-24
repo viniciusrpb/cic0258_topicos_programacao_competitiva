@@ -22,6 +22,8 @@
 
 4.2. [Algoritmo de Prim](algoritmos/prim.cpp)
 
+4.3. [Upsolving 385 (Div. 1) - Hongcow Builds a Nation](https://codeforces.com/problemset/problem/744/A) [Solução](upsolving/744a_hongcow_nation.cpp)
+
 ## 5. Outros Tópicos
 
 5.1. Ordenação Topológica
