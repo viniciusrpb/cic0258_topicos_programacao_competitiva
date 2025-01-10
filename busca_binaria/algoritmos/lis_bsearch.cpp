@@ -64,4 +64,4 @@ int main(){
     printf("%d\n",lis_nlogn(array,n));
  
     return 0;
-
+}
