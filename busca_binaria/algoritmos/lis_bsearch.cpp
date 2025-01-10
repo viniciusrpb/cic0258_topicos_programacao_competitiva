@@ -16,30 +16,25 @@
  */
 
 #include<bits/stdc++.h>
-#define MAX 200000
-
+#define MAX 200001
+ 
 using namespace std;
-
-int bsearch_index(int *v, int l, int r, int key){
-
-    int ans;
-    
-    while (l<=r) {
-        int mid = (l + r) / 2;
-        if (v[mid] >= key){
-            ans = mid;
-            r = mid-1;
-        }
-        else{
-            l = mid+1;
-        }
+ 
+int bsearch_index(int *v, int l, int r, int key)
+{
+    while (r - l > 1) {
+        int m = l + (r - l) / 2;
+        if (v[m] >= key)
+            r = m;
+        else
+            l = m;
     }
-
+ 
     return r;
 }
-
+ 
 int lis_nlogn(int *v, int n){
-
+ 
     int bucket[n+1];
     bucket[0] = v[0];
     int ans = 1;
@@ -51,21 +46,22 @@ int lis_nlogn(int *v, int n){
             bucket[index]=v[i];
         }
     }
-    return tam;
+ 
+    return ans;
 }
-
+ 
 int main(){
-
+ 
     int n;
     int array[MAX+1];
-
+ 
     scanf("%d",&n);
-
+ 
     for(int i = 0; i < n; i++){
         scanf("%d",array+i);
     }
-
+ 
     printf("%d\n",lis_nlogn(array,n));
-
+ 
     return 0;
-}
+
