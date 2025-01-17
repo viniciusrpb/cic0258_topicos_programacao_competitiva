@@ -24,4 +24,4 @@
 
 ## Upsolving
 
-1. Upsolving: [ICPC 2018-2019 Latin America: C - Cheap Trips](https://codeforces.com/blog/entry/63157) [[Solução](upsolving/beecrowd_2905.cpp)]
+1. Upsolving: [ICPC 2018-2019 Latin America Regional Contest: C - Cheap Trips](https://vjudge.net/contest/514619#problem/O) [[Solução](upsolving/beecrowd_2905.cpp)]
