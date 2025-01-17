@@ -18,14 +18,14 @@ typedef long long ll;
 
 ll tab[20][2][200];
 
-void num2digits(int n, vector<int>& digits){
+void num2digits(ll n, vector<int>& digits){
     while(n){
         digits.push_back(n%10);
         n = n/10;
     }
 }
 
-ll dp(int idx, int trava, int soma, vector<int>& digits){
+ll dp(int idx, int trava, ll soma, vector<int>& digits){
 
     if(idx == -1)
         return soma;
@@ -58,19 +58,19 @@ ll dp(int idx, int trava, int soma, vector<int>& digits){
     return ans;
 }
 
-ll solve(int a, int b){
+ll solve(ll a, ll b){
 
-    // inicializacao da tabela
     memset(tab,-1,sizeof(tab));
 
     vector<int> digitsA;
     num2digits(a-1,digitsA);
-    ll sum_a = dp(digitsA.size()-1,1,0,digitsA); // completar depois;
+    ll sum_a = dp(digitsA.size()-1,1,0,digitsA);
 
+    memset(tab,-1,sizeof(tab));
+    
     vector<int> digitsB;
     num2digits(b,digitsB);
-    ll sum_b = dp(digitsB.size()-1,1,0,digitsB); // completar depois;
-
+    ll sum_b = dp(digitsB.size()-1,1,0,digitsB);
     return sum_b - sum_a;
 }
 
