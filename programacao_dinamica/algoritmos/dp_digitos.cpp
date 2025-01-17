@@ -4,51 +4,84 @@
  * Prof. Dr. Vinicius R. P. Borges
  * 
  * Tópico: Programação Dinâmica
- * Objetivo: Código-fonte que implementa uma DP de Dígitos - versão recursiva
- * Autor: Alberto Duarte
+ * Objetivo: Código-fonte que implementa uma DP de Dígitos para determinar a soma dos digitos dos numeros entre [a,b].
  * 
- * Compilar no terminal: g++ dp_digitos.cpp -std=c++11 -o dig
+ * Compilar no terminal: g++ dp_digitos.cpp -std=c++17 -o dig
  * Executar: ./dig
  */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+
 using namespace std;
 
-const int MAX = (int)1e5;
+typedef long long ll;
 
-string r;
+ll tab[20][2][180];
 
-int dp(int i, bool menor, int dnn) {
-    if(i >= (int)r.size()) return 1;
-    if(dnn > 3) return 0;
-    
-    int dr = r[i]-'0';
-    int res = 0;
-
-    for(int d = 0; d <= 9; d++) {
-        int dnn2 = dnn + (d > 0);
-        if(menor == true) {
-            res += dp(i+1, true, dnn2);
-        }
-        else if(d < dr) {
-            res += dp(i+1, true, dnn2);
-        }
-        else if(d == dr) {
-            res += dp(i+1, false, dnn2);
-        }
-        
-        // if(menor == true or d <= dr) {
-        //     bool menor2 = (menor) or (d < dr);
-        //     int dnn2 = dnn + (d > 0);
-
-        //     res += dp(i+1, menor2, dnn2);
-        // }
-    }    
-    return res;
+void getDigits(int n, vector<int>& digits){
+    while(n){
+        digits.push_back(n%10);
+        n=n/10;
+    }
 }
 
-            
-int main() {
+ll dp(int idx, int tight, int sum, vector<int>& digits){
+    int k, newtight;
+    
+    if(idx == -1){
+        return sum;
+    }
+    
+    if(tab[idx][tight][sum] != -1 and tight != 1){
+        return tab[idx][tight][sum];
+    }
+    
+    ll ans = 0;
+    if(tight == 1)
+        k = digits[idx];
+    else
+        k = 9;
+    
+    for(int i = 0; i <= k ; i++){
+        newtight = 0;
+        if(digits[idx] == i)
+            newtight = tight;
 
+        ans+=dp(idx-1,newtight,sum+i,digits);
+    }
+    
+    if(!tight)
+        tab[idx][tight][sum]=ans;
+    
+    return ans;
+}
+
+ll solve(int l, int r){
+    
+    memset(tab, -1, sizeof(tab));
+    
+    vector<int> digitsL;
+    getDigits(l-1,digitsL);
+    
+    ll ans_l = dp(digitsL.size()-1,1,0,digitsL);
+    
+    vector<int> digitsR;
+    getDigits(r,digitsR);
+    
+    ll ans_r = dp(digitsR.size()-1,1,0,digitsR);
+    
+    return ans_r - ans_l;
+    
+}
+
+int main(){
+    int t,a,b;
+    
+    scanf("%d",&t);
+    
+    while(t--){
+        scanf("%d %d",&a,&b);
+        printf("%lld\n",solve(a,b));
+    }
     return 0;
 }
