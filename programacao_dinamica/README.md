@@ -24,4 +24,4 @@
 
 ## Upsolving
 
-1. Upsolving: [xxx](https://codeforces.com/problemset/) [[Solução](upsolving/xxx)]
+1. Upsolving: [ICPC 2018-2019 Latin America: C - Cheap Trips](https://codeforces.com/blog/entry/63157) [[Solução](upsolving/beecrowd_2905.cpp)]
