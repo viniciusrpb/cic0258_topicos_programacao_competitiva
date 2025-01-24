@@ -2,9 +2,9 @@
 
 1. Divisibilidade
 
-   3.1. Upsolving: [Beecrowd 2238 - Divisors](https://judge.beecrowd.com/en/problems/view/2238) [[Solução](upsolving/beecrowd_2238.cpp)]
+   1.1. Upsolving: [Beecrowd 2238 - Divisors](https://judge.beecrowd.com/en/problems/view/2238) [[Solução](upsolving/beecrowd_2238.cpp)]
 
-   3.2. Upsolving: [1165D - Almost All Divisors](https://codeforces.com/contest/1165/problem/D) [[Solução](upsolving/cf_1165d_almost_divisors.cpp)]
+   1.2. Upsolving: [1165D - Almost All Divisors](https://codeforces.com/contest/1165/problem/D) [[Solução](upsolving/cf_1165d_almost_divisors.cpp)]
 
 2. Primalidade
 
