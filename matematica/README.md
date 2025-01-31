@@ -15,3 +15,5 @@
    2.3. Upsolving: [17A - Noldbach problem](https://codeforces.com/contest/17/problem/A) [[Solução](upsolving/cf_17a_noldbach_problem.cpp)]
 
 3. Fatoração
+
+   3.1. [Algoritmo](general/fatoracao.cpp) 
