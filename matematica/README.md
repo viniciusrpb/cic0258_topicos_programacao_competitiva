@@ -26,8 +26,8 @@
    
 5. Aritmética Modular
 
-   5.1. [CSES 1095 - Exponentiation / Exponenciação Modular Rápida](https://cses.fi/problemset/task/1095) [[Solução](general/fast_mod_exp.cpp)]
+   5.1. [CSES 1095 - Exponentiation / Exponenciação Modular Rápida](https://cses.fi/problemset/task/1095) [[Solução](general/cses_1095.cpp)]
 
    5.2. [Inverso Multiplicativo](general/inv_mult.cpp)
 
-   5.3. [Maratona SBC de Programação 2014 - RSA](maratona_sbc_2014_rsa.pdf) [[Solução](upsolving/beecrowd_1716.cpp)]
+   5.3. [Maratona SBC de Programação 2014 - RSA](general/maratona_sbc_2014_rsa.pdf) ou [Beecrowd 1716 - RSA](https://judge.beecrowd.com/en/problems/view/1716) [[Solução](upsolving/beecrowd_1716.cpp)]
