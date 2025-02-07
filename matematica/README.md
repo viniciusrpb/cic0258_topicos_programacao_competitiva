@@ -22,7 +22,7 @@
 
    4.1. [Algoritmo de Euclides](general/gcd.cpp)
 
-   4.2. [Algoritmo de Euclides Extendido](general/gcd_extended.cpp)
+   4.2. [Algoritmo de Euclides Estendido](general/gcd_extended.cpp)
    
 5. Aritmética Modular
 
